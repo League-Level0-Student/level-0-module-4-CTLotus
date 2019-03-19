@@ -17,6 +17,8 @@ public class FruitQuiz extends KeyAdapter {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
 		question2 = new JLabel("<html> Which of these are not real creatures? <br> A: Loch Ness <br> B: Kraken <br> C: T-Rex</html>");
+		question3 = new JLabel("<html> Which is a real object? <br> A: Bat <br> B: Baseball Bat <br> C: Pie</html>");
+		question4 = new JLabel("<html> Whch of these is a genre? <br> A: Sci-Fi <br> B: Cat <br> C: Water</html>");
 	}	
 
 	@Override
@@ -29,7 +31,20 @@ public class FruitQuiz extends KeyAdapter {
 		int B = 66;
 		int C = 67;
 		// 14. Repeat steps 11, 12, and 13 for question3 and question4 - IMPORTANT: The questions must be in reverse order from top to bottom to work properly
-		
+		if (question4.isShowing()) {
+			if (keyCode == A) {
+				correct();
+			}else {
+				incorrect();
+			}
+		}
+		if (question3.isShowing()) {
+				if (keyCode == B) {
+					correct();
+				}else {
+					incorrect();
+				}
+			}
 		// 12. If question2 is showing,
 			if (question2.isShowing()) {
 				if (keyCode == A) {
